@@ -12,11 +12,11 @@ Comes with preconfigured ddev dev environment.
 ## Setup Local Environment
 * Clone the repository
 ```
-git clone https://github.com/matthewmessmer/migration-demo-jp.git && cd migration-demo
+git clone https://github.com/matthewmessmer/migration-demo-jp.git && cd migration-demo-jp
 ```
 * Run the following commands to install the site:
 ```
-composer install --ignore-platform-reqs
+ddev composer install --ignore-platform-reqs
 ddev start
 ddev drush si --existing-config
 ```

@@ -12,7 +12,7 @@ Comes with preconfigured ddev dev environment.
 ## Setup Local Environment
 * Clone the repository
 ```
-git clone git@github.com:matthewmessmer/migration-demo-jp.git && cd migration-demo
+git clone https://github.com/matthewmessmer/migration-demo-jp.git && cd migration-demo
 ```
 * Run the following commands to install the site:
 ```
@@ -20,7 +20,6 @@ composer install --ignore-platform-reqs
 ddev start
 ddev drush si --existing-config
 ```
-* If you are on Linux and have issues starting ddev, try adding `export ddev_SSH_AUTH_SOCK="${SSH_AUTH_SOCK}"` at the end of your ~/.bashrc
 
 ## Access the site
 * `https://migration-demo.lndo.site` Drupal site

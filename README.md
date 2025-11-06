@@ -12,7 +12,7 @@ Comes with preconfigured ddev dev environment.
 ## Setup Local Environment
 * Clone the repository
 ```
-git clone git@github.com:matthewmessmer/migration-demo.git && cd migration-demo
+git clone git@github.com:matthewmessmer/migration-demo-jp.git && cd migration-demo
 ```
 * Run the following commands to install the site:
 ```

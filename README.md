@@ -16,7 +16,7 @@ git clone https://github.com/matthewmessmer/migration-demo-jp.git && cd migratio
 ```
 * Run the following commands to install the site:
 ```
-ddev composer install --ignore-platform-reqs
+ddev composer install
 ddev start
 ddev drush si --existing-config
 ```

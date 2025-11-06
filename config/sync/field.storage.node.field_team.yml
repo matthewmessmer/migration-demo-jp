@@ -1,19 +1,18 @@
-uuid: 8b721494-69a6-417a-a608-59a24d845973
+uuid: 73cc4944-8b70-423f-9e85-70989daf0c65
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
-id: node.field_image
-field_name: field_image
+id: node.field_team
+field_name: field_team
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: node
 module: core
 locked: false
-cardinality: 1
+cardinality: 6
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

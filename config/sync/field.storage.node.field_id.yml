@@ -1,16 +1,16 @@
-uuid: 8b721494-69a6-417a-a608-59a24d845973
+uuid: 5a28c133-0fda-4605-bc85-13561ed2b878
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
-id: node.field_image
-field_name: field_image
+id: node.field_id
+field_name: field_id
 entity_type: node
-type: entity_reference
+type: integer
 settings:
-  target_type: media
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

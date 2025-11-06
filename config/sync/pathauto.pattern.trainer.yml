@@ -1,0 +1,22 @@
+uuid: c93a2ca1-0b30-4af6-96e4-f4976abf58ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: trainer
+label: Trainer
+type: 'canonical_entities:node'
+pattern: 'trainers/[node:title]'
+selection_criteria:
+  3f49bb8e-a079-4a18-8162-28fc16e4fa08:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 3f49bb8e-a079-4a18-8162-28fc16e4fa08
+    context_mapping:
+      node: node
+    bundles:
+      trainer: trainer
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,17 @@
+uuid: 4fb4ec54-9a76-4e2f-a9f2-b50443f49067
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Trainer
+type: trainer
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

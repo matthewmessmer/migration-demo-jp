@@ -1,0 +1,26 @@
+uuid: 4ec08a18-ee63-4c7e-871c-a0ddcff94f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.restricted_html
+    - node.type.pokemon
+  module:
+    - text
+id: node.pokemon.body
+field_name: body
+entity_type: node
+bundle: pokemon
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - restricted_html
+field_type: text_with_summary

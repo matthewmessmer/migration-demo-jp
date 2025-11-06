@@ -1,0 +1,24 @@
+uuid: 0e47b221-2c06-43fc-a32e-44f8b223a482
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trainer.field_image
+    - field.field.node.trainer.field_team
+    - node.type.trainer
+  module:
+    - user
+id: node.trainer.teaser
+targetEntityType: node
+bundle: trainer
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_image: true
+  field_team: true

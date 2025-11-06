@@ -19,11 +19,11 @@ git clone https://github.com/matthewmessmer/migration-demo-jp.git && cd migratio
 ddev composer install
 ddev start
 ddev drush si --existing-config
+ddev drush uli
 ```
 
 ## Access the site
-* `https://migration-demo.lndo.site` Drupal site
-* `http://migration-api.lndo.site` Mock API powered by `https://github.com/typicode/json-server`
+* `[https://migration-demo.ddev.site/](https://migration-demo.ddev.site/)` Drupal site
 
 ## Running Migrations
 

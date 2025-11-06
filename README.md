@@ -23,7 +23,7 @@ ddev drush uli
 ```
 
 ## Access the site
-* `[https://migration-demo.ddev.site/](https://migration-demo.ddev.site/)` Drupal site
+* `https://migration-demo.ddev.site/` Drupal site
 
 ## Running Migrations
 

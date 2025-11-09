@@ -19,6 +19,7 @@ git clone https://github.com/matthewmessmer/migration-demo-jp.git && cd migratio
 ddev composer install
 ddev start
 ddev drush si --existing-config
+ddev drush yaml-content-import ../
 ddev drush uli
 ```
 

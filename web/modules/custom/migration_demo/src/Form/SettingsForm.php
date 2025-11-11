@@ -45,6 +45,8 @@ class SettingsForm extends ConfigFormBase {
       '#description' => t('Controls offset parameter of API.'),
     ];
 
+    // @TODO ADD SETTING FOR CACHING
+
     // @TODO SET SKIPPED TYPES
     $form['promoted_parks'] = [
       '#type' => 'entity_autocomplete',

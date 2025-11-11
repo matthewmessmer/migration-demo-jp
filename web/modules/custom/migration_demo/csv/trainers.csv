@@ -1,2 +1,7 @@
-name,name_jp,team,image
-Ash,サトシ,"bulbasaur",
+name,name_ja,team,filename
+Ash,サトシ,"pikachu,bulbasaur,squirtle,charizard,pidgeotto,butterfree",ash.jpg
+Misty,カスミ,"staryu,starmie,psyduck,goldeen,horsea",misty.png
+Brock,タケシ,"onix,geodude,vulpix,zubat",brock.png
+Team Rocket Jessie & James,ロケット団ムサシ＆コジロ,"weezing,arbok,meowth",team-rocket.png
+Giovanni,サカキ,"persian,dugtrio,nidoqueen,nidoking,rhydon,mewtwo",giovanni-persian.png
+Lance,ワタル,"gyarados,dragonair,dragonair,aerodactyl,dragonite",lance.png

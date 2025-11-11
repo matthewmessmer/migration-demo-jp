@@ -15,7 +15,7 @@ mode: default
 content:
   field_image:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -23,10 +23,11 @@ content:
     weight: 102
     region: content
   field_team:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
-      link: true
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
     weight: 103
     region: content

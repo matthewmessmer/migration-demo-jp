@@ -14,12 +14,16 @@ targetEntityType: node
 bundle: trainer
 mode: teaser
 content:
-  links:
-    settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
-  field_image: true
   field_team: true
   langcode: true
+  links: true

@@ -1,0 +1,38 @@
+uuid: 28f9b641-d81a-4d5d-8801-c9c30a8025fa
+langcode: en
+status: true
+dependencies: {  }
+id: trainer_image_media
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - pokemon
+migration_group: pokemon
+label: 'Trainer Image Media'
+source:
+  plugin: csv
+  path: modules/custom/migration_demo/csv/trainers.csv
+  delimiter: ','
+  enclosure: '"'
+  ids:
+    - name
+process:
+  name: filepath
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: trainer_image_file
+    no_stub: true
+    source: name
+  field_media_image/alt:
+    plugin: concat
+    source:
+      - name
+    delimiter: ' '
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+idMap: {  }
+migration_dependencies:
+  required:
+    - trainer_image_file

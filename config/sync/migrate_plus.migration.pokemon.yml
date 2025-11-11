@@ -1,0 +1,86 @@
+uuid: 3bfc8521-3718-48bc-97d6-8edd00080f09
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_plus
+      - migration_demo
+id: pokemon
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - pokemon
+migration_group: pokemon
+label: 'Pokemon API Migration'
+source:
+  plugin: pokemon_api
+  data_fetcher_plugin: pokemon_http
+  data_parser_plugin: json
+  item_selector: results
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+  urls:
+    - 'https://pokeapi.co/api/v2/pokemon'
+  ids:
+    src_name:
+      type: string
+  fields:
+    -
+      name: src_name
+      label: 'Pokemon Name'
+      selector: name
+    -
+      name: src_url
+      label: 'Pokemon Detail Url'
+      selector: url
+process:
+  title: name_en
+  field_id: id
+  body/format:
+    plugin: default_value
+    default_value: restricted_html
+  body/value:
+    -
+      plugin: str_replace
+      source: flavor_text_en_red
+      regex: true
+      search: '@\s+@'
+      replace: ' '
+    -
+      plugin: callback
+      callable: trim
+  field_type:
+    plugin: sub_process
+    source: types
+    process:
+      target_id:
+        plugin: entity_lookup
+        ignore_case: true
+        entity_type: taxonomy_term
+        bundle_key: vid
+        bundle: type
+        value_key: field_id
+        source: type/name
+  field_evolution:
+    plugin: migration_lookup
+    migration: pokemon
+    source: evolution_chain
+    no_stub: true
+  field_image:
+    plugin: migration_lookup
+    migration: pokemon_sprite_media
+    source: src_name
+    no_stub: true
+  field_sprite:
+    plugin: migration_lookup
+    migration: pokemon_animated_media
+    source: src_name
+    no_stub: true
+destination:
+  plugin: 'entity:node'
+  default_bundle: pokemon
+idMap: {  }
+migration_dependencies: {  }

@@ -1,0 +1,20 @@
+uuid: 816d1e62-3555-4700-a8c9-6f50721a9e79
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.trainer
+id: node.trainer.menu_link
+field_name: menu_link
+entity_type: node
+bundle: trainer
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

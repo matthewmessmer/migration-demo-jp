@@ -1,0 +1,69 @@
+uuid: 113ddaa0-b564-451c-8452-2aa55c50e556
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_plus
+      - migration_demo
+id: pokemon_jp
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - pokemon
+migration_group: pokemon
+label: 'Pokemon Japanese Translation Migration'
+source:
+  plugin: pokemon_api
+  data_fetcher_plugin: pokemon_http
+  data_parser_plugin: json
+  item_selector: results
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+  urls:
+    - 'https://pokeapi.co/api/v2/pokemon'
+  ids:
+    src_name:
+      type: string
+  fields:
+    -
+      name: src_name
+      label: 'Pokemon Name'
+      selector: name
+    -
+      name: src_url
+      label: 'Pokemon Detail Url'
+      selector: url
+process:
+  nid:
+    plugin: migration_lookup
+    migration: pokemon
+    source: src_name
+    no_stub: true
+  langcode:
+    plugin: default_value
+    default_value: ja
+  title: name_ja
+  body/format:
+    plugin: default_value
+    default_value: restricted_html
+  body/value:
+    -
+      plugin: str_replace
+      source: flavor_text_ja-Hrkt_x
+      regex: true
+      search: '@\s+@'
+      replace: ''
+    -
+      plugin: callback
+      callable: trim
+destination:
+  plugin: 'entity:node'
+  default_bundle: pokemon
+  translations: true
+idMap: {  }
+migration_dependencies:
+  required:
+    - pokemon

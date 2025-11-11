@@ -1,0 +1,20 @@
+uuid: 9f5a62f9-8a82-407a-8c77-aef4a9a6f1f1
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.pokemon
+id: node.pokemon.uid
+field_name: uid
+entity_type: node
+bundle: pokemon
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

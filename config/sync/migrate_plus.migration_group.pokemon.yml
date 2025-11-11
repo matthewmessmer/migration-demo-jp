@@ -1,0 +1,10 @@
+uuid: b48e21f2-65b9-4819-b973-c32221c1b6d6
+langcode: en
+status: true
+dependencies: {  }
+id: pokemon
+label: pokemon
+description: ''
+source_type: null
+module: null
+shared_configuration: null

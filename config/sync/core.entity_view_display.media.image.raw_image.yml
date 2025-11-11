@@ -1,0 +1,32 @@
+uuid: 24853c47-0a55-439e-938b-f1a26477f38f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.raw_image
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - image
+id: media.image.raw_image
+targetEntityType: media
+bundle: image
+mode: raw_image
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

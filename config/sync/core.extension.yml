@@ -22,12 +22,16 @@ module:
   filter: 0
   help: 0
   image: 0
+  language: 0
   link: 0
   media: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
   migrate: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migration_demo: 0
   mysql: 0
   node: 0
   options: 0
@@ -46,6 +50,7 @@ module:
   views_ui: 0
   yaml_content: 0
   pathauto: 1
+  content_translation: 10
   views: 10
   minimal: 1000
 theme:

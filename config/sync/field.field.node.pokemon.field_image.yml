@@ -10,7 +10,7 @@ id: node.pokemon.field_image
 field_name: field_image
 entity_type: node
 bundle: pokemon
-label: Image
+label: Sprite
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,22 @@
+uuid: 8443c5be-50c3-4d8e-9e93-334fefa5ad27
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.pokemon
+id: node.pokemon.sticky
+field_name: sticky
+entity_type: node
+bundle: pokemon
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

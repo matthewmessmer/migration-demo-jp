@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.pokemon.field_evolution
     - field.field.node.pokemon.field_id
     - field.field.node.pokemon.field_image
+    - field.field.node.pokemon.field_sprite
     - field.field.node.pokemon.field_type
     - node.type.pokemon
   module:
@@ -35,4 +36,6 @@ hidden:
   field_evolution: true
   field_id: true
   field_image: true
+  field_sprite: true
   field_type: true
+  langcode: true

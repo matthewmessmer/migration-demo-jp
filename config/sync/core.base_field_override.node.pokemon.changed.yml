@@ -1,0 +1,18 @@
+uuid: c9c628c0-256a-4d42-adaa-8a61386ec86c
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.pokemon
+id: node.pokemon.changed
+field_name: changed
+entity_type: node
+bundle: pokemon
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: dfbb0b69-7122-49e1-91c7-fd17a1ec1e27
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.pokemon
+id: node.pokemon.status
+field_name: status
+entity_type: node
+bundle: pokemon
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

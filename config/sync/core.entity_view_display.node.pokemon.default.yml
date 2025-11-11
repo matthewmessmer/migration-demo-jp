@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.pokemon.field_evolution
     - field.field.node.pokemon.field_id
     - field.field.node.pokemon.field_image
+    - field.field.node.pokemon.field_sprite
     - field.field.node.pokemon.field_type
     - node.type.pokemon
   module:
@@ -45,10 +46,19 @@ content:
     type: entity_reference_entity_view
     label: above
     settings:
-      view_mode: default
+      view_mode: raw_image
       link: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_sprite:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: raw_image
+      link: false
+    third_party_settings: {  }
+    weight: 106
     region: content
   field_type:
     type: entity_reference_label
@@ -63,4 +73,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  langcode: true

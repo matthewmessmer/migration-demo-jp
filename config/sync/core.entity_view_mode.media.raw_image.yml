@@ -1,0 +1,11 @@
+uuid: 375bf490-6f12-47fc-bd55-d24f1658ee53
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.raw_image
+label: 'Raw Image'
+description: ''
+targetEntityType: media
+cache: true

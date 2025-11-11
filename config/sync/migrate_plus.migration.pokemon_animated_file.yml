@@ -1,0 +1,74 @@
+uuid: 84d4ed47-3386-4841-ac43-006a9bd5aa28
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_plus
+      - migration_demo
+id: pokemon_animated_file
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - pokemon
+migration_group: pokemon
+label: 'Pokemon Animated Sprite Files'
+source:
+  plugin: pokemon_api
+  data_fetcher_plugin: pokemon_http
+  data_parser_plugin: json
+  item_selector: results
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+  urls:
+    - 'https://pokeapi.co/api/v2/pokemon'
+  ids:
+    src_name:
+      type: string
+  fields:
+    -
+      name: src_name
+      label: 'Pokemon Name'
+      selector: name
+    -
+      name: src_url
+      label: 'Pokemon Detail Url'
+      selector: url
+process:
+  source_full_path:
+    source: sprites/versions/generation-v/black-white/animated/front_default
+    plugin: skip_on_404
+    method: row
+  destination_basename:
+    plugin: callback
+    callable: basename
+    source: '@source_full_path'
+  destination_basepath:
+    plugin: default_value
+    default_value: 'public://images/pokemon/animated'
+  destination_full_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - '@destination_basepath'
+      - '@destination_basename'
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@destination_full_path'
+    file_exists: 'use existing'
+  status:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:file'
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }

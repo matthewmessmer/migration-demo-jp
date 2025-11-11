@@ -1,0 +1,22 @@
+uuid: 321a0a56-e983-4dea-a957-2976a75b3250
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.trainer
+id: node.trainer.sticky
+field_name: sticky
+entity_type: node
+bundle: trainer
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

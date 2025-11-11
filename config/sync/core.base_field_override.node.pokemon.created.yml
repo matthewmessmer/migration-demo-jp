@@ -1,0 +1,18 @@
+uuid: ac218514-35ec-4ec1-ae17-dbc744a415c0
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.pokemon
+id: node.pokemon.created
+field_name: created
+entity_type: node
+bundle: pokemon
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

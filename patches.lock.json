@@ -1,0 +1,17 @@
+{
+    "_hash": "3d792ee204bb82ed332e7492afd68a3f9f4f8a1f62e1be765a6ebc31da38209f",
+    "patches": {
+        "drupal/yaml_content": [
+            {
+                "package": "drupal/yaml_content",
+                "description": "#2923874 [Multilingual] Support creating translated content",
+                "url": "https://www.drupal.org/files/issues/2025-11-12/yaml_content-2923874-12.patch",
+                "sha256": "61fc2925c079efbb3772875bf2d6acb10619ddade353eaf6ac0b4789fb2fab3b",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}

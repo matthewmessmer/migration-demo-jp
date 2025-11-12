@@ -1,121 +1,179 @@
-# Pokemon types and default values.
-# This content will be imported to the vocabulary "Types"
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Normal"
   field_id:
     - value: "normal"
   field_color:
     - color: "#A8A77A"
+  translations:
+    - langcode: "ja"
+      name: "ノーマル"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Fire"
   field_id:
     - value: "fire"
   field_color:
     - color: "#EE8130"
+  translations:
+    - langcode: "ja"
+      name: "ほのお"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Fighting"
   field_id:
     - value: "fighting"
   field_color:
     - color: "#C22E28"
+  translations:
+    - langcode: "ja"
+      name: "かくとう"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Water"
   field_id:
     - value: "water"
   field_color:
     - color: "#6390F0"
+  translations:
+    - langcode: "ja"
+      name: "みず"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Flying"
   field_id:
     - value: "flying"
   field_color:
     - color: "#A98FF3"
+  translations:
+    - langcode: "ja"
+      name: "ひこう"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Grass"
   field_id:
     - value: "grass"
   field_color:
     - color: "#7AC74C"
+  translations:
+    - langcode: "ja"
+      name: "くさ"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Poison"
   field_id:
     - value: "poison"
   field_color:
     - color: "#A33EA1"
+  translations:
+    - langcode: "ja"
+      name: "どく"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Electric"
   field_id:
     - value: "electric"
   field_color:
     - color: "#F7D02C"
+  translations:
+    - langcode: "ja"
+      name: "でんき"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Ground"
   field_id:
     - value: "ground"
   field_color:
     - color: "#E2BF65"
+  translations:
+    - langcode: "ja"
+      name: "じめん"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Psychic"
   field_id:
     - value: "psychic"
   field_color:
     - color: "#F95587"
+  translations:
+    - langcode: "ja"
+      name: "エスパー"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Rock"
   field_id:
     - value: "rock"
   field_color:
     - color: "#B6A136"
+  translations:
+    - langcode: "ja"
+      name: "いわ"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Ice"
   field_id:
     - value: "ice"
   field_color:
     - color: "#96D9D6"
+  translations:
+    - langcode: "ja"
+      name: "こおり"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Bug"
   field_id:
     - value: "bug"
   field_color:
     - color: "#A6B91A"
+  translations:
+    - langcode: "ja"
+      name: "むし"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Dragon"
   field_id:
     - value: "dragon"
   field_color:
     - color: "#6F35FC"
+  translations:
+    - langcode: "ja"
+      name: "ドラゴン"
 
 - entity: "taxonomy_term"
   vid: "type"
+  langcode: "en"
   name: "Ghost"
   field_id:
     - value: "ghost"
   field_color:
     - color: "#735797"
+  translations:
+    - langcode: "ja"
+      name: "ゴースト"

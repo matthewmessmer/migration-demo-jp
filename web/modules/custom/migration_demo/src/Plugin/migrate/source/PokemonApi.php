@@ -85,6 +85,16 @@ class PokemonApi extends Url implements ContainerFactoryPluginInterface {
       $row->setSourceProperty($key, $value);
     }
 
+    if (isset($pokemon_data['height'])) {
+      // Convert height from decimeter to centimeters.
+      $row->setSourceProperty('height_cm', $pokemon_data['height'] * 10);
+    }
+
+    if (isset($pokemon_data['weight'])) {
+      // Convert height from hectograms to kilograms.
+      $row->setSourceProperty('weight_kg', $pokemon_data['weight'] / 10);
+    }
+
     // Get species data.
     if (!empty($pokemon_data['species']['url'])) {
       $species_data = $this->fetchApiData($pokemon_data['species']['url']);

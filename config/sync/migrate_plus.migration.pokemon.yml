@@ -74,13 +74,13 @@ process:
     migration: pokemon_sprite_media
     source: src_name
     no_stub: true
-  field_sprite:
-    plugin: migration_lookup
-    migration: pokemon_animated_media
-    source: src_name
-    no_stub: true
+  field_height: height_cm
+  field_weight: weight_kg
 destination:
   plugin: 'entity:node'
   default_bundle: pokemon
 idMap: {  }
-migration_dependencies: {  }
+migration_dependencies:
+  required:
+    - pokemon_sprite_media
+  optional: {  }

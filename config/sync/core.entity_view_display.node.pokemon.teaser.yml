@@ -6,10 +6,11 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.pokemon.body
     - field.field.node.pokemon.field_evolution
+    - field.field.node.pokemon.field_height
     - field.field.node.pokemon.field_id
     - field.field.node.pokemon.field_image
-    - field.field.node.pokemon.field_sprite
     - field.field.node.pokemon.field_type
+    - field.field.node.pokemon.field_weight
     - node.type.pokemon
   module:
     - user
@@ -18,7 +19,7 @@ targetEntityType: node
 bundle: pokemon
 mode: teaser
 content:
-  field_sprite:
+  field_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
@@ -30,8 +31,9 @@ content:
 hidden:
   body: true
   field_evolution: true
+  field_height: true
   field_id: true
-  field_image: true
   field_type: true
+  field_weight: true
   langcode: true
   links: true

@@ -5,10 +5,11 @@ dependencies:
   config:
     - field.field.node.pokemon.body
     - field.field.node.pokemon.field_evolution
+    - field.field.node.pokemon.field_height
     - field.field.node.pokemon.field_id
     - field.field.node.pokemon.field_image
-    - field.field.node.pokemon.field_sprite
     - field.field.node.pokemon.field_type
+    - field.field.node.pokemon.field_weight
     - node.type.pokemon
   module:
     - text
@@ -23,7 +24,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_evolution:
     type: entity_reference_label
@@ -31,7 +32,18 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 7
+    region: content
+  field_height:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_id:
     type: number_integer
@@ -40,25 +52,16 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_image:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: raw_image
       link: false
     third_party_settings: {  }
-    weight: 102
-    region: content
-  field_sprite:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: raw_image
-      link: false
-    third_party_settings: {  }
-    weight: 106
+    weight: 2
     region: content
   field_type:
     type: entity_reference_label
@@ -66,12 +69,23 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 4
+    region: content
+  field_weight:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 1
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true

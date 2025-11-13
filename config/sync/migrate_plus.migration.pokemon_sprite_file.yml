@@ -38,7 +38,7 @@ source:
       selector: url
 process:
   source_full_path:
-    source: sprites/versions/generation-v/black-white/front_default
+    source: sprites/versions/generation-v/black-white/animated/front_default
     plugin: skip_on_404
     method: row
   destination_basename:

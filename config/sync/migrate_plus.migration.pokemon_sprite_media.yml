@@ -33,10 +33,6 @@ source:
       label: 'Pokemon Detail Url'
       selector: url
 process:
-  source_full_path:
-    source: sprites/versions/generation-v/black-white/front_default
-    plugin: skip_on_404
-    method: row
   field_media_image/target_id:
     plugin: migration_lookup
     migration: pokemon_sprite_file

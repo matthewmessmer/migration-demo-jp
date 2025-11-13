@@ -5,10 +5,11 @@ dependencies:
   config:
     - field.field.node.pokemon.body
     - field.field.node.pokemon.field_evolution
+    - field.field.node.pokemon.field_height
     - field.field.node.pokemon.field_id
     - field.field.node.pokemon.field_image
-    - field.field.node.pokemon.field_sprite
     - field.field.node.pokemon.field_type
+    - field.field.node.pokemon.field_weight
     - node.type.pokemon
   module:
     - media_library
@@ -45,6 +46,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_height:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_id:
     type: number
     weight: 9
@@ -59,18 +67,18 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_sprite:
-    type: media_library_widget
-    weight: 13
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_type:
     type: options_buttons
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_weight:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -113,6 +121,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

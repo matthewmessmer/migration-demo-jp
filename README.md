@@ -31,6 +31,14 @@ ddev drush uli
 * List migrations
 ```
 ddev drush ms
+# pokemon_sprite_file
+# pokemon_sprite_media
+# pokemon
+# pokemon_jp
+# trainer_image_file
+# trainer_image_media
+# trainers
+# trainers_jp
 ```
 
 * Run migration import
@@ -39,13 +47,13 @@ ddev drush mim *migration_name*
 ddev drush mim *migration_name* --update
 ddev drush mim *migration_name* --limit=10
 ddev drush mim *migration_name* --idlist=123
-ddev drush mim --group=*group_name*
+ddev drush mim --tag=*group_name*
 ```
 
 * Rollback migration
 ```
 ddev drush mr *migration_name*
-ddev drush mr --group=*group_name*
+ddev drush mr --tag=*group_name*
 ```
 
 * Reset migrations status to idle

@@ -2,9 +2,11 @@
 
 namespace Drupal\migration_demo\Form;
 
+use Drupal\Core\Entity\Element\EntityAutocomplete;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Configure Migration Demo settings for this site.
@@ -45,23 +47,12 @@ class SettingsForm extends ConfigFormBase {
       '#description' => t('Controls offset parameter of API.'),
     ];
 
-    // @TODO ADD SETTING FOR CACHING
-
-    // @TODO SET SKIPPED TYPES
-    $form['promoted_parks'] = [
-      '#type' => 'entity_autocomplete',
-      '#title' => t('Promoted Parks.'),
-      '#description' => t('Can enter multiple parks separated by commas'),
-      '#tags' => TRUE,
-      '#target_type' => 'node',
-      '#bundles' => ['park'],
+    $form['cache'] = [
+      '#type' => 'textfield',
+      '#title' => t('Cache Time'),
+      '#default_value' => $config->get('cache') ?? $config->get('cache') || '+1 Day',
+      '#description' => t('Controls time of caching api responses.'),
     ];
-
-    // Need to set this way to avoid error with entity_autocomplete field.
-    // InvalidArgumentException: The #default_value property has to be an entity object or an array of entity objects.
-    if (!empty($this->config('migration_demo.settings')->get('promoted_parks'))) {
-      $form['promoted_parks']['#default_value'] = Node::loadMultiple($this->config('migration_demo.settings')->get('promoted_parks'));
-    }
 
     return parent::buildForm($form, $form_state);
   }

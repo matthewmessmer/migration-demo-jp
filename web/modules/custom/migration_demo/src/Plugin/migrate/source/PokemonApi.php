@@ -175,8 +175,8 @@ class PokemonApi extends Url implements ContainerFactoryPluginInterface {
     }
 
     if ($data) {
-      // Cache for 24 hours.
-      $this->cache->set($cid, $data, strtotime('+1 day'));
+      // Cache response.
+      $this->cache->set($cid, $data, strtotime(\Drupal::config('migration_demo.settings')->get('cache')));
     }
 
     return $data;

@@ -4,3 +4,17 @@
  * @file
  * Primary module hooks for Migration Demo module.
  */
+
+use Drupal\views\ViewExecutable;
+
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function migration_demo_views_pre_render(ViewExecutable $view) {
+  // Check if the current view is the one you want to target.
+  if ($view->storage->id() == 'pokemon') {
+    // Attach your custom library.
+    $view->element['#attached']['library'][] = 'migration_demo/custom';
+  }
+}

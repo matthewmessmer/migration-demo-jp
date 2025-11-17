@@ -1,0 +1,33 @@
+/* Only targer PC layout */
+.layout--pass--content-medium > .block.block-system-main-block,
+.layout--pass--content-medium > .block-page-title-block {
+  grid-column: 2 / 16;
+}
+
+
+/* Table styling */
+table.views-table.cols-6 {
+  thead {
+    tr {
+      th {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+td.views-field.views-field-body {
+  max-width: 360px;
+  padding: 16px 20px 16px 0;
+  margin: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.views-field-field-type {
+  ul {
+    margin: 14px;
+  }
+}

@@ -12,7 +12,7 @@ id: node.pokemon.body
 field_name: body
 entity_type: node
 bundle: pokemon
-label: Description
+label: 'Pokédex Description'
 description: ''
 required: true
 translatable: true

@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      fields:
+        title:
+          label: 名前
+        field_image:
+          label: 画像
+        body:
+          label: ポケモン図鑑説明文
+        field_height:
+          label: 身長
+        field_weight:
+          label: 体重
+        field_type:
+          label: 種類
+description: ポケモン
